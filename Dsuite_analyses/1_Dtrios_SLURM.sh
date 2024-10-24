@@ -19,7 +19,6 @@
 cd /PATH/TO/DSUITE_TOP1/
 
 # Loop through the different ms-VCF files to study (in our case, the different files would contain targets/SNPs specific to certain chromosomes/linkage groups, for instance). 
-# Be aware that an outgroup is used/specified:
 for file in /PATH/TO/CHROMOSOME_LEVEL_VCFS/*.vcf
 do
   /PATH/TO/Dsuite Dtrios --tree=TOP1.nwk -o ${file%.vcf}_TOP1 $file SETS_TOP1.txt
