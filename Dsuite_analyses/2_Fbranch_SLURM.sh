@@ -15,11 +15,12 @@
 ## The example provided here is for TOP1, which in Newick format would be in our case: (Outgroup,(Calotriton,(NIO,(Lissotriton,Triturus))));
 ## Also, note that the text file used as input is the output file with the '_tree.txt' suffix after using Dsuite's Dtrios function - for more information see https://github.com/millanek/Dsuite)
 
-# Start by setting your working directory (where the Dtrios output is located - in our case in separate subfolders, see below)
+# Start by setting your working directory (where the Dtrios output is located - in our case ordered in separate subfolders, see below)
 cd /PATH/TO/DSUITE_TOP1/
 
-## Because we work with subsets of data (on chromosome-level) we had already ordered our Dtrios output in separate folders per subset
-## Note that here, we will loop through those folders and repeat the Dsuite Fbranch analysis independently per subset of our data
+## Because we work with subsets of data (on chromosome-level) we had already ordered our Dtrios output in separate subfolders per subset
+## Note that here, we will loop through those subfolders and repeat the Dsuite Fbranch analysis independently per each subset of our data
+## Also note that, with this set-up, we made sure that the required newick tree was available in each of the subfolders
 
 for dir in */; do
     echo "Attempting to change directory to: $dir"
